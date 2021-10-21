@@ -29,4 +29,8 @@ lftp -u $LDUSER,$LDPASS sftp://$LD7 << EOF
 lcd $LOCALDIR
 cd /transfer
 mirror --parallel=5 -R $LOCALDIR
+exit
 EOF
+
+
+
