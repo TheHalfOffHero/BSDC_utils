@@ -1,4 +1,13 @@
 #!/bin/bash
+#
+#  rsync's over the files from old server to new.
+#  
+#  Written by: Matt Ruiz
+#  Note: You will have to enter the password each time
+#        If you don't want to do this you can try using shell keys for authentication
+#        it should default to shell keys anyway as it is more secure
+#
+
 
 echo "Enter the Original Stec's IP: "
 read OrigStecIP
