@@ -12,4 +12,4 @@ export LD7=10.255.255.67
 
 export FTPDIR=/home/spcu/ftp/upload
 export SFTPDIR=/sftp/spcu/bsdc/spcu/spcu
-export LOCALDIR=/home/mruiz/Transfer/tmp
+export LOCALDIR=/home/mruiz/Transfer/

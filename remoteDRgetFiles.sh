@@ -3,6 +3,8 @@
 # First step is to source the variables file
 source '/home/mruiz/Scripts/BSDC_utils/varfiles/getDRfilesvars.sh'
 
+echo $LOCALDIR
+
 #Then we want to lftp to sftp server and grap the remote backup files
 echo "enter the username for sftp server"
 read SFTPUSER
@@ -10,7 +12,7 @@ read SFTPUSER
 echo "Enter the password for sftp server"
 read SFTPPASS
 
-Then we lftp and grab the Backup files
+#Then we lftp and grab the Backup files
 lftp -u $SFTPUSER,$SFTPPASS sftp://$RBU1 << EOF
 cd $SFTPDIR
 lcd $LOCALDIR
@@ -28,7 +30,7 @@ read LDPASS
 lftp -u $LDUSER,$LDPASS sftp://$LD7 << EOF
 lcd $LOCALDIR
 cd /transfer
-mirror --parallel=5 -R $LOCALDIR
+mput *
 exit
 EOF
 
