@@ -38,10 +38,10 @@ else
 	then
 		# Mount the directories
 		echo "This server is AKR"
-		#mount -t cifs -o ro,username=bsdchardware,password=bsdchardware@123 //hwmount/bsdchardware /hardware
+		#mount -t cifs -o ro,username=username,password=password //hwmount/bsdchardware /hardware
 	else
 		echo "This server is MSP"
-		#mount -t cifs -o ro,username=bsdchardware,password=bsdchardware@123 //hwmount/hardware /hardware
+		#mount -t cifs -o ro,username=username,password=password //hwmount/hardware /hardware
 	fi
 fi	
 	
@@ -53,9 +53,9 @@ else
 	if [ "$IPCHECK" -eq 20  ]
 	then
 		echo "This server is AKR"
-		#mount -t cifs -o ro,username=bsdchardware,password=bsdchardware@123 //hwmount/bsdchardware/Hardware_Scripts/Windows/BSDC_Programs /install/BSDC_Programs
+		#mount -t cifs -o ro,username=username,password=password //hwmount/bsdchardware/Hardware_Scripts/Windows/BSDC_Programs /install/BSDC_Programs
 	else
 		echo "This server is MSP"
-		#mount -t cifs -o ro,username=bsdchardware,password=bsdchardware@123 //hwmount/hardware/Hardware_Scripts/Windows/BSDC_Programs /install/BSDC_Programs
+		#mount -t cifs -o ro,username=username,password=password //hwmount/hardware/Hardware_Scripts/Windows/BSDC_Programs /install/BSDC_Programs
 	fi
 fi
