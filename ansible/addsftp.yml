@@ -1,0 +1,22 @@
+---
+- name: Create sftp user and appropriate directories for conversions
+  hosts: sftp
+  remote_user: root
+
+  tasks:
+  - name: add the sftp user for the CU
+    ansible.builtin.user:
+      name: test
+      group: sftpcus
+      shell: /sbin/nologin
+      system: yes
+
+- name: remove the user for future tests
+  hosts: sftp
+  remote_user: root
+
+  tasks:
+  - name: delete the user
+    ansible.builtin.user:
+      name: test
+      state: absent
