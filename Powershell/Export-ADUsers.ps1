@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Properties * | Select -Property Givenname,Surname,SamAccountName,DisplayName | Export-CSV "C:\\ADusers.csv" -NoTypeInformation -Encoding UTF8

@@ -4,13 +4,23 @@
   remote_user: root
 
   tasks:
-  - name: add the sftp user for the CU
+  
+  #Creates user and adds it to the appropriate group
+  - name: add the sftp user for the CU  
     ansible.builtin.user:
-      name: test
+      name: test        #needs var for user
       group: sftpcus
       shell: /sbin/nologin
       system: yes
+      home: /sftp/test  #needs var for user
+      password: 'test'  #needs to be same as username once var is added
 
+  #- name: create the /sftp/user directory
+  #  ansible.builtin.file:
+  #    path: 
+
+
+#Removing the user so we can test again
 - name: remove the user for future tests
   hosts: sftp
   remote_user: root
